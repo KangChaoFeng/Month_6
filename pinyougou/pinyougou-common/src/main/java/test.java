@@ -1,3 +1,7 @@
+import com.sun.org.apache.xerces.internal.dom.PSVIAttrNSImpl;
+
+import javax.sound.midi.Soundbank;
+
 /**
  * @ClassName：test
  * @Description：
@@ -7,4 +11,7 @@
  * @Version：V1.0
  */
 public class test {
+    public static void main(String[] args) {
+        System.out.println("测试");
+    }
 }
