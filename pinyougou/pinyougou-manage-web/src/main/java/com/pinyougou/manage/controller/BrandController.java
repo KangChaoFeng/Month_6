@@ -20,12 +20,19 @@ import java.util.List;
 @RequestMapping("/brand")
 @RestController
 public class BrandController {
-//    注入数据
+    //    注入数据
     @Reference
     private BrandService brandService;
-
+    //查询品牌
     @GetMapping("/findAll")
     public List<TbBrand>findAll(){
-        return brandService.queryAll();
+//        return brandService.queryAll();
+        return brandService.findAll();
+    }
+    //    分页查询品牌
+    @GetMapping("/testPage")
+    public List<TbBrand>testPage(Integer page,Integer rows){
+//        return brandService.testPage(page,rows);
+        return (List<TbBrand>) brandService.findPage(page, rows).getRows();
     }
 }

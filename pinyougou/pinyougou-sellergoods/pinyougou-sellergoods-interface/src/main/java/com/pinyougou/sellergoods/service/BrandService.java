@@ -1,6 +1,7 @@
 package com.pinyougou.sellergoods.service;
 
 import com.pinyougou.pojo.TbBrand;
+import com.pinyougou.service.BaseServcie;
 
 import java.util.List;
 
@@ -12,7 +13,9 @@ import java.util.List;
  * @Date 2018年08月29日 19时43分
  * @Version V1.0
  */
-public interface BrandService {
+public interface BrandService extends BaseServcie<TbBrand>{
 //    查询品牌
     public List<TbBrand>queryAll();
+//分页查询
+    List<TbBrand> testPage(Integer page, Integer rows);
 }
